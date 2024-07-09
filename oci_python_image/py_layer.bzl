@@ -65,6 +65,7 @@ def py_layers(name, binary):
         tar(
             name = layer_target,
             srcs = [binary],
+            compress = "zstd",
             mtree = "{}.{}_tar_manifest".format(name, layer),
         )
 
